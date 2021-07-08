@@ -1,5 +1,5 @@
 export const initialState = {
-    view: 'false'
+    view: 'off'
 }
 
 function reducer(state, action) {

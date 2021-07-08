@@ -1,11 +1,28 @@
 import React from 'react'
 import {MenuAlt1Icon} from '@heroicons/react/outline'
 import DashboardIcon from '@material-ui/icons/Dashboard';
+import { useStateValue } from '../StateContext/StateProvider';
 
 function Navbar() {
+    // eslint-disable-next-line 
+    const [{view}, dispatch] = useStateValue()
+
+    const setMobileSidebar = (e) =>{
+        e.preventDefault()
+        dispatch({
+            type: 'SET_NAVBAR',
+            view: view === "off" ? 'on' : 'off'
+        })
+    }
+
+    console.log(view)
+
     return (
-        <nav className="py-4 px-8 flex flex-row items-center">
-            <div className="search bg-white p-3 rounded-lg">
+        <nav className="transition duration-500 ease-in-out py-4 md:px-8 px-4 flex flex-row items-center">
+            <div onClick={setMobileSidebar} className="search md:hidden flex bg-white p-3 cursor-pointer hover:bg-gray-200 rounded-lg">
+                <MenuAlt1Icon height={20} width={20} />
+            </div>
+            <div onClick={setMobileSidebar} className="search md:flex hidden bg-white p-3 cursor-pointer hover:bg-gray-200 rounded-lg">
                 <MenuAlt1Icon height={20} width={20} />
             </div>
             <div className="flex-grow"></div>
