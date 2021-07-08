@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {ClipboardListIcon,  ChevronDoubleLeftIcon, XIcon} from '@heroicons/react/outline'
 import {useHistory, useLocation} from 'react-router-dom'
 import { useStateValue } from '../StateContext/StateProvider'
@@ -33,8 +33,8 @@ function Sidebar() {
     ]
 
     return (
-        <div className="bg-white">
-            <div className="flex flex-col">
+        <div className="z-50 transition duration-500 ease-in-out bg-white">
+            <div className="transition duration-500 ease-in-out flex flex-col">
                 <span onClick={setMobileSidebar} className="md:hidden flex flex-row items-center justify-between p-2 m-2 rounded-lg">
                     <ChevronDoubleLeftIcon height={24} width={24} className="text-gray-700" />
                     <XIcon height={24} width={24} className="text-gray-700" />
