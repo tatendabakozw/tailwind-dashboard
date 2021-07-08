@@ -13,6 +13,12 @@ function Sidebar() {
             location: "/",
             icon: <ClipboardListIcon height={24} width={24} className="text-gray-700" />,
             id:1
+        },
+        {
+            title:"Page 1",
+            location: "/page1",
+            icon: <ClipboardListIcon height={24} width={24} className="text-gray-700" />,
+            id:2
         }
     ]
 

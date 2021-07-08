@@ -1,14 +1,24 @@
 import React from 'react'
 import {SearchIcon} from '@heroicons/react/outline'
+import DashboardIcon from '@material-ui/icons/Dashboard';
 
 function Navbar() {
     return (
         <nav className="py-4 px-8 flex flex-row items-center">
-            <div className="search bg-white p-4 rounded-lg">
+            <div className="search bg-white p-3 rounded-lg">
                 <SearchIcon height={20} width={20} />
             </div>
             <div className="flex-grow"></div>
-            <div className="ri">a;skfh</div>
+            <span className="bg-white p-3 rounded mx-2">
+                <DashboardIcon height={20} width={20} fontSize="small" className="text-gray-700" />
+            </span>
+            <span className="bg-blue-300 p-3 rounded mx-2">
+                <p className="text-gray-700 text-sm">AD</p>
+            </span>
+            <div className="p-3 rounded mx-2 flex flex-col">
+                <p className="text-gray-900">Admin Dashboard</p>
+                <p className="text-xs text-gray-500">dashboard@gmail.com</p>
+            </div>
         </nav>
 
     )
