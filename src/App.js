@@ -1,13 +1,14 @@
-import DashboardLayout from './layout/DashboardLayout';
-import logo from './logo.svg';
-import Navbar from './nav/Navbar';
-import Sidebar from './nav/Sidebar';
+import React from 'react'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Home from './pages/Home';
 
 function App() {
   return (
-    <DashboardLayout className="App bg-blue-200">
-      iam the children
-    </DashboardLayout>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Home} />
+      </Switch>
+    </Router>
   );
 }
 
