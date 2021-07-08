@@ -1,12 +1,12 @@
 import React from 'react'
-import {SearchIcon} from '@heroicons/react/outline'
+import {MenuAlt1Icon} from '@heroicons/react/outline'
 import DashboardIcon from '@material-ui/icons/Dashboard';
 
 function Navbar() {
     return (
         <nav className="py-4 px-8 flex flex-row items-center">
             <div className="search bg-white p-3 rounded-lg">
-                <SearchIcon height={20} width={20} />
+                <MenuAlt1Icon height={20} width={20} />
             </div>
             <div className="flex-grow"></div>
             <span className="bg-white p-3 rounded mx-2">
@@ -15,7 +15,7 @@ function Navbar() {
             <span className="bg-blue-300 p-3 rounded mx-2">
                 <p className="text-gray-700 text-sm">AD</p>
             </span>
-            <div className="p-3 rounded mx-2 flex flex-col">
+            <div className="p-3 rounded mx-2 md:flex hidden flex-col">
                 <p className="text-gray-900">Admin Dashboard</p>
                 <p className="text-xs text-gray-500">dashboard@gmail.com</p>
             </div>
